@@ -1,17 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDom from 'react-dom'
+import PrimeiroComponente from './componentes/PrimeiroComponente'
+import { CompA, CompB as B } from './componentes/DoisComponentes'
+import MultiElementos from './componentes/MultiElementos'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const elemento = document.getElementById('root')
+ReactDom.render(
+    <div>
+        <MultiElementos />
+        <PrimeiroComponente valor="Bom Dia!" />
+        <CompA valor="Olá Eu sou o A" />
+        <B valor="B na Área!" />
+    </div>
+    , elemento)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+// const jsx = <h1>Olá React!</h1>
+// ReactDom.render(jsx, elemento)
